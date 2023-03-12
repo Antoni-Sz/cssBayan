@@ -16,7 +16,6 @@ body{
     font-size: 2.5rem;
     color:#493e05
 }
-
 .bayan {
     display: flex;
     flex-direction: column;
@@ -41,9 +40,7 @@ input[type="radio"]{
     background-image: url('assets/img/icons8-plus-math-30.png');
     background-size: 1.5rem;
     background-repeat: no-repeat;
-
 }
-
 .contents {
     overflow: hidden;
     opacity: 0;
@@ -52,9 +49,8 @@ input[type="radio"]{
     cursor: pointer;
     text-align: center;
 }
-
 .contents img {
-    max-width: 22rem;
+    max-width: 28rem;
 }
 .bayan_item:active .bayan .contents img {
     opacity: 0.8;
@@ -67,17 +63,14 @@ input[type="radio"]{
 .bayan input:checked  ~ .bayan_header {
     color: #BDB76B;
 }
-
 .bayan_item:active .bayan .bayan_header .bayan_on  {
     background-image: url('assets/svg/minus-svgrepo-com.svg');
     transition: all 0.8s ease-in-out;
 }
-
 .bayan input:checked  + .bayan_header .bayan_on {
     background-image: url('assets/svg/minus-svgrepo-com.svg');
     transition: all 0.8s ease-in-out;
 }
-
   @media screen and (min-width: 1080px) and (hover:hover) {
     .bayan_container:hover .bayan_header .bayan_on {
         opacity: 1;

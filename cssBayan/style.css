@@ -1,0 +1,128 @@
+body{
+    background-color: LemonChiffon;
+    line-height: 1.5;
+    margin: 1.5rem 0;
+}
+.wrapper {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+.bayan_container:hover {
+    color:#BDB76B;
+    transition:0,9s;
+}
+.title {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color:#493e05
+}
+.bayan {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.bayan_header {
+    cursor: pointer;
+    font-size: 2rem;
+    border-top: 0.02rem solid gray;
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="radio"]{
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+}
+.bayan_on {
+    width: 6%;
+    opacity: 0;
+    background-image: url('assets/img/icons8-plus-math-30.png');
+    background-size: 1.5rem;
+    background-repeat: no-repeat;
+}
+.contents {
+    overflow: hidden;
+    opacity: 0;
+    transition: all 1s ease-in;
+    max-height: 0;
+    cursor: pointer;
+    text-align: center;
+}
+.contents img {
+    max-width: 28rem;
+}
+.bayan_item:active .bayan .contents img {
+    opacity: 0.8;
+}
+.bayan input:checked ~ .contents {
+    opacity: 1;
+    max-height: 100rem;
+    transition: all 1s ease-in-out;
+}
+.bayan input:checked  ~ .bayan_header {
+    color: #BDB76B;
+}
+.bayan_item:active .bayan .bayan_header .bayan_on  {
+    background-image: url('assets/svg/minus-svgrepo-com.svg');
+    transition: all 0.8s ease-in-out;
+}
+.bayan input:checked  + .bayan_header .bayan_on {
+    background-image: url('assets/svg/minus-svgrepo-com.svg');
+    transition: all 0.8s ease-in-out;
+}
+  @media screen and (min-width: 1080px) and (hover:hover) {
+    .bayan_container:hover .bayan_header .bayan_on {
+        opacity: 1;
+    }
+    .bayan input:hover  + .bayan_header .bayan_on{
+        background-image: url('assets/svg/minus-svgrepo-com.svg');
+        transition: all 0.8s ease-in-out;
+    }
+    .bayan input:hover ~ .contents {
+        opacity: 1;
+        max-height: 100rem;
+        transition: all 2s ease-in-out;
+    }
+  }
+  @media screen and (min-width: 569px) and (max-width: 1080px) {
+    .wrapper {
+        width: 90%;
+    }
+    .title {
+        font-size: 4rem;
+    }
+    .bayan_header {
+        font-size: 2rem;
+    }
+    .bayan input:checked  ~ .bayan_header {
+        color: black;
+    }
+    .contents img {
+        max-width: 60%;
+    }
+    .bayan_on  {
+        opacity: 1;
+    }
+  }
+  @media screen and (min-width: 320px) and (max-width: 568px){
+    .wrapper {
+        max-width: 80%;
+    }
+    .bayan input:checked  ~ .bayan_header {
+        color: black;
+    }
+    .title {
+        font-size: 3rem;
+    }
+    .bayan_header {
+        font-size: 1.5rem;
+    }
+    .contents img {
+        max-width: 60%;
+    }
+    .bayan_on  {
+        background-size: 1rem;
+        opacity: 1;
+    }
+  }

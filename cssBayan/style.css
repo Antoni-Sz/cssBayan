@@ -1,5 +1,5 @@
 body{
-    background-color: rgba(247, 250, 215, 0.5);
+    background-color: LemonChiffon;
     line-height: 1.5;
     margin: 1.5rem 0;
 }
@@ -8,14 +8,14 @@ body{
     margin: 0 auto;
 }
 .bayan_container:hover {
-    color:blue;
+    color:#BDB76B;
     transition:0,9s;
 }
 .title {
     font-weight: bold;
     font-size: 2.5rem;
+    color:#493e05
 }
-
 
 .bayan {
     display: flex;
@@ -65,7 +65,7 @@ input[type="radio"]{
     transition: all 1s ease-in-out;
 }
 .bayan input:checked  ~ .bayan_header {
-    color: blue;
+    color: #BDB76B;
 }
 
 .bayan_item:active .bayan .bayan_header .bayan_on  {
@@ -79,7 +79,6 @@ input[type="radio"]{
 }
 
   @media screen and (min-width: 1080px) and (hover:hover) {
-
     .bayan_container:hover .bayan_header .bayan_on {
         opacity: 1;
     }
@@ -97,12 +96,14 @@ input[type="radio"]{
     .wrapper {
         width: 90%;
     }
-
     .title {
         font-size: 4rem;
     }
     .bayan_header {
         font-size: 2rem;
+    }
+    .bayan input:checked  ~ .bayan_header {
+        color: black;
     }
     .contents img {
         max-width: 60%;
@@ -115,8 +116,8 @@ input[type="radio"]{
     .wrapper {
         max-width: 80%;
     }
-    .bayan input:hover  ~ .bayan_header {
-        color:blue;
+    .bayan input:checked  ~ .bayan_header {
+        color: black;
     }
     .title {
         font-size: 3rem;

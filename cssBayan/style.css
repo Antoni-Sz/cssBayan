@@ -35,13 +35,13 @@ input[type="radio"]{
     height: 0;
     opacity: 0;
 }
-.bayan_on  {
+.bayan_on {
     width: 6%;
     opacity: 0;
     background-image: url('assets/img/icons8-plus-math-30.png');
     background-size: 1.5rem;
     background-repeat: no-repeat;
-    transition: all 0.5s ease-in;
+
 }
 
 .contents {
